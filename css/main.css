@@ -28,11 +28,6 @@ html, body {
 	/*max-width: 1500px;*/
 }
 
-header, .toggle-menu {
-	width: 100%;
- 	position: absolute;
-}
-
 h1 {
 	font-size: 6vw;
 }
@@ -47,6 +42,18 @@ h3 {
 
 h4 {
 	font-size: 3vw;
+}
+
+
+.header-container {
+	position: fixed;
+	width: 100%;
+	z-index: 10;
+}
+
+header, .toggle-menu {
+	width: 100%;
+ 	position: relative;
 }
 
 /* Set z-index so that .toggle-menu is hiden
@@ -71,7 +78,7 @@ header {
 /*** Header Logo ***/
 
 header {
-	height: 100px;
+	height: 70px;
 	background-color: #c5eff7;
 }
 
@@ -184,8 +191,8 @@ header nav a:hover {
 	width: 100%;
 	height:190px;
 	background-color: #D91E18;
-	-webkit-transform: translate(0,-180px);
-	transform:translate(0,-180px);
+	-webkit-transform: translate(0,-190px);
+	transform:translate(0,-190px);
 	transition: transform 0.5s ease;
 }
 
@@ -210,8 +217,8 @@ header nav a:hover {
 }
 
 .pull-menu-out {
-	-webkit-transform: translate(0,100px);
-	transform:translate(0,100px);
+	-webkit-transform: translate(0,0px);
+	transform:translate(0,0px);
 }
 
 /*
@@ -246,7 +253,6 @@ use non-toggleable nav bar instead of toggleable menu*/
 		font-size:15px;
 	}
 
-
 	header nav ul {
 		width: 100%;
 	}
@@ -261,6 +267,16 @@ use non-toggleable nav bar instead of toggleable menu*/
 
 	.toggle-menu {
 		display: none;
+	}
+
+	/*Expand the header and adjust the position of
+	jumbotron accordingly*/
+	header {
+		height:100px;
+	}
+
+	.jumbotron {
+		top:100px;
 	}
 
 }
@@ -287,7 +303,7 @@ use non-toggleable nav bar instead of toggleable menu*/
 
 .jumbotron {
 	position:relative;
-	top:100px;
+	top:70px;
 	z-index:-1; /* Under dropdown menu */
 	width: 100%;
 	height: 271px;
