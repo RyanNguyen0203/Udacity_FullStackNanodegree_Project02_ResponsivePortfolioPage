@@ -517,6 +517,19 @@ main section h1 {
 	color: black;
 }
 
+.connect {
+	border-bottom: none;
+}
+
+/*
+*
+* Footer
+*
+*/
+
+footer {
+	height: 200px;
+}
 
 /*
 *

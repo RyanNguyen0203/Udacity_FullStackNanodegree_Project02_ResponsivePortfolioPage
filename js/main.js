@@ -19,6 +19,12 @@ header.addEventListener('click', function(e){
 	}
 })
 
+toggleMenu.addEventListener('click', function(e){
+	toggleMenu.classList.toggle('pull-menu-out');
+	toggleButton.classList.toggle('change-button');
+	e.stopPropagation();
+})
+
 // Slideshow (Testimonials)
 var slides = document.getElementsByClassName("slide");
 var len = slides.length; 
@@ -65,3 +71,39 @@ previous.addEventListener('click', function(e){
 	}
 	e.stopPropagation();
 })
+
+// Scroll to section from navbar
+$(".go-to-my-story").click(function() {
+    $('html, body').animate({
+        scrollTop: $(".my-story").offset().top-150
+    }, 500);
+});
+
+$(".go-to-featured-work").click(function() {
+    $('html, body').animate({
+        scrollTop: $(".featured-work").offset().top-300
+    }, 500);
+});
+
+$(".go-to-testimonials").click(function() {
+    $('html, body').animate({
+        scrollTop: $(".testimonials").offset().top-150
+    }, 500);
+});
+
+$(".go-to-connect").click(function() {
+    $('html, body').animate({
+        scrollTop: $(".connect").offset().top
+    }, 500);
+});
+
+// var goMyStory = document.querySelector("#go-to-my-story");
+// var myStory = document.querySelector("#my-story");
+
+// goMyStory.addEventListener('click', function(e) {
+// 	console.log($("#my-story").scrollTop());
+// })
+
+// $("#go-to-my-story").click(function(){
+//     alert($("#my-story").scrollTop());
+// });
