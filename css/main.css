@@ -66,6 +66,8 @@ header {
 *
 */
 
+/*** Header Logo ***/
+
 header {
 	height: 100px;
 	background-color: #c5eff7;
@@ -85,15 +87,18 @@ header {
 }
 
 .header-logo p:nth-child(1) {
-	font-size:2em;
 	margin-top:0.5em;
 	margin-bottom: 0;
+	font-size:27px;
 }
 
 .header-logo p:nth-child(2) {
 	margin-top:0.2em;
+	font-size:13px;
 }
 
+
+/*** Header Navbar ***/
 /*Hide non-toggleable nav bar for screen size <= 701px*/
 header nav {
 	display: none;
@@ -103,7 +108,6 @@ header nav {
 	float:right;
 	vertical-align: center;
 	height: 100%;
-	font-size:1.2em;
 }
 
 header nav ul {
@@ -124,6 +128,7 @@ header nav ul li {
 header nav a {
 	text-decoration: none;
 	color:black;
+	font-size:2vw;
 }
 
 header nav a:hover {
@@ -174,26 +179,27 @@ header nav a:hover {
 
 .toggle-menu {
 	width: 100%;
+	height:190px;
 	background-color: #D91E18;
 	-webkit-transform: translate(0,-180px);
 	transform:translate(0,-180px);
-	/*top:100%;*/
 	transition: transform 0.5s ease;
 }
 
 .toggle-menu ul {
 	margin:0;
+	padding-top:10px;
 } 
 
 .toggle-menu li {
 	display: block;
-	padding: 1.2em;
+	padding: 10px;
 }
 
 .toggle-menu ul li a {
 	text-decoration: none;
 	color:black;
-	font-size:1.4em;
+	font-size:17px;
 }
 
 .toggle-menu ul li a:active {
@@ -213,11 +219,8 @@ header nav a:hover {
 
 /*When viewport width is more than or equal to 701,
 use non-toggleable nav bar instead of toggleable menu*/
-@media screen and (min-width:701px) {
-	.toggle-menu {
-		display: none;
-	}
 
+@media screen and (min-width:701px) {
 	header {
 		display: flex;
 	}
@@ -228,59 +231,50 @@ use non-toggleable nav bar instead of toggleable menu*/
 	}
 
 	.header-logo {
-		width: 25%;
+		width:35%;
+		padding-left: 3%;
+	}
+
+	.header-logo p:nth-child(1) {
+		font-size:30px;
+	}
+
+	.header-logo p:nth-child(2) {
+		font-size:15px;
+	}
+
+
+	header nav ul {
+		width: 100%;
+	}
+
+	.header-logo {
+		width: 35%;
 	}
 
 	.toggle-button {
 		display: none;
 	}
 
-}
-
-/*Responsive header*/
-@media screen and (min-width:501px) {
-	.header-logo {
-		padding-left:2em;
-	}
-}
-
-@media screen and (min-width: 701px) {
-	.header-logo {
-		width:35%;
-		padding-left: 1.5em;
-	}
-
-	header nav ul {
-		width: 100%;
+	.toggle-menu {
+		display: none;
 	}
 
 }
 
-@media screen and (min-width: 901px) {
-	.header-logo {
-		padding-left: 3em; 
-	}
-	header nav ul {
-		width: 80%;
-	}
-}
-
-@media screen and (min-width: 1351px) {
-	header nav ul {
-		width: 75%;
-		font-size:1.3em;
-	}
-
+@media screen and (min-width: 1001px) {
 	.header-logo p:nth-child(1) {
-		font-size:2.2em;
+		font-size:33px;
 	}
 
 	.header-logo p:nth-child(2) {
-		font-size:1.2em;
+		font-size:18px;
 	}
 
+	header nav {
+		font-size:;
+	} 
 }
-
 
 /*
 *
