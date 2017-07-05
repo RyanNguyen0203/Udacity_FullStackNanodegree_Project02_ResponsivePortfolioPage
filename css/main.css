@@ -136,6 +136,7 @@ header nav a {
 	font-size:2vw;
 }
 
+
 header nav a:hover {
 	text-decoration: underline;
 }
@@ -443,5 +444,27 @@ main section h1 {
 		font-size:2vw;
 	}
 
+}
+
+
+/*
+*
+* Fix all font sizes when viewport >= 1501px 
+*
+*/
+
+/*Fix text size when viewport >= 1501px*/
+@media screen and (min-width: 1501px) {
+	.project-box p:nth-child(2) {
+		font-size:60px;
+	}
+
+	header nav a {
+		font-size: 30px;
+	}
+
+	h1 {
+		font-size: 80px;
+	}
 }
 
