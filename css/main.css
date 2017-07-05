@@ -444,11 +444,9 @@ main section h1 {
 
 }
 
-/*
-*
-* Testimonials 
-*
-*/
+
+/*** Testimonials ***/
+
 .slide {
 	width: 75%;
 	margin:auto;
@@ -490,6 +488,17 @@ main section h1 {
 .testimonial-buttons button {
 	border:none;
 	background-color: white;
+}
+
+
+/*** Connect with me ***/
+.connect p {
+	text-align: center;	
+	letter-spacing: 3vw;
+}
+.connect a {
+	font-size:8vw;
+	color: black;
 }
 
 
