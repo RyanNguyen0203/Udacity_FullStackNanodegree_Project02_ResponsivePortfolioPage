@@ -19,11 +19,12 @@ and border width*/
 	font-size:3vw;
 }
 
+
 /*****************************************************/
 
 html, body {
 	height: 100%;
-	margin:0;
+	margin:auto;
 	/*max-width: 1500px;*/
 }
 
@@ -42,6 +43,10 @@ h2 {
 
 h3 {
 	font-size: 4vw;
+}
+
+h4 {
+	font-size: 3vw;
 }
 
 /* Set z-index so that .toggle-menu is hiden
@@ -369,30 +374,74 @@ main section h1 {
 .featured-work {
 	display: flex;
 	flex-wrap: wrap;
-	align-items: center;
-	justify-content: center;
 }
 
 .project-box {
 	width: 95%;
 	height: 95%;
 	/*border: 1px solid black;*/
-	margin: 2.5%;
+	margin: auto;
+	padding-bottom:10%;
 }
 
-.project-box img{
+/* Project picture */
+.project-picture {
 	display: block;
 	width:100%;
 	margin:auto;
 	border: 1px solid grey;
 }
 
-.project-box h3 {
-	text-align:center;
+.project-box p {
+	text-align: center;
+}
+
+.project-box p:nth-child(2) {
+	font-size:4vw;
+	margin:10px 0 17px 0;
+}
+
+.project-box p:nth-child(3) {
+	margin:0;
+	padding-bottom:10px;
 }
 
 .project-box a{
 	display: block;
 	text-align: center;
+}
+
+/* View github repo button */
+.view-github-repo {
+	width: 50px;
+}
+
+@media screen and (min-width: 426px) {
+	/*Display 2 project-boxes on one row*/
+	.project-box {
+		width: 47.5%;
+		height: 47.5%;
+	}
+
+	.view-github-repo {
+	width: 60px;
+}
+}
+
+@media screen and (min-width: 769px) {
+	/*Display 2 project-boxes on one row*/
+	.project-box {
+		width: 26%;
+		height: 26%;
+	}
+
+	.project-box p:nth-child(2) {
+		font-size:2.75vw;
+	}
+
+	.project-box p:nth-child(3) {
+		font-size:2vw;
+	}
+
 }
 
