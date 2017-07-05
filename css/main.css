@@ -60,10 +60,7 @@ header {
 }
 
 /*Fix header to top of the viewport*/
-.header-container {
-	display: fixed;
-	top:0;
-}
+
 
 /*
 *
@@ -364,6 +361,7 @@ main section {
 	position: relative;
 	top:100px;
 	padding: 0 15% 0 15%;
+	border-bottom: solid rgba(128, 128, 128, 0.17) 0.5px;
 }
 
 main section h1 {
@@ -452,16 +450,47 @@ main section h1 {
 *
 */
 .slide {
-	width: 100%;
-	height: 300px;
-	border: 1px solid black;
-	background-color:green;
+	width: 75%;
+	margin:auto;
+	height: 45vw;
+	/*border-bottom: 1px solid black;*/
+	/*background-color:green;*/
+}
+
+.testimonial-container {
+	display: flex;
+}
+
+.slide p, .testimonial-picture, .testimonial-buttons {
+	margin:auto;
+}
+
+.testimonial-buttons {
+	text-align: center;
+	margin-top:0;
+}
+
+.slide p {
+	text-align:center;
 }
 
 .slide-disappear {
 	display: none;
 }
 
+.testimonial-picture {
+	display: block;
+	width: 80px;
+	height: 80px;
+	/*border: solid 1px black;*/
+	border-radius:50%;
+}
+
+
+.testimonial-buttons button {
+	border:none;
+	background-color: white;
+}
 
 
 /*
