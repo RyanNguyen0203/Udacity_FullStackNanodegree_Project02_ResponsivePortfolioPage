@@ -51,6 +51,11 @@ h4 {
 	z-index: 10;
 }
 
+.header-on-scroll {
+/* Make the header transparent when user start scrolling */
+	opacity: 0.5;
+}
+
 header, .toggle-menu {
 	width: 100%;
  	position: relative;
@@ -243,6 +248,7 @@ use non-toggleable nav bar instead of toggleable menu*/
 	.header-logo {
 		width:35%;
 		padding-left: 3%;
+		cursor:pointer;
 	}
 
 	.header-logo p:nth-child(1) {
