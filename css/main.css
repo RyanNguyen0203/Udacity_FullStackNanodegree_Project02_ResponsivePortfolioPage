@@ -1,33 +1,47 @@
-/*Set HTML5 the display of semantic elements to block for backward
+/*************** DEFAULT *****************/
+
+/*Set the display of HTML5 semantic elements to block for backward
 compatibility with HTML4*/
-article, section, aside, hgroup, nav, header,
-footer, figure, figcaption {
-  display: block;
+article, section, aside, hgroup, nav, header, footer, figure, figcaption {
+	display: block;
 }
 
-/*Set the max width of the following elements to 100% of their parent's 
+/*Set the max width of the following elements to 100% of their parent's
 width to prevent overflowing the parent's boundaries*/
 img, embed, object, video {
 	max-width: 100%;
 }
 
-/*Set width measurement to include the padding width
-and border width*/
-* {
+*{
 	box-sizing: border-box;
+}
+
+/*************** MAIN STYLES *****************/
+
+
+
+/*
+*
+* WIDELY APPLIED STYLES
+*
+*/
+
+
+
+* {
 	max-width: 1500px;
 	font-size:3vw;
 	font-family: 'Lato', sans-serif;
 	color:#373737;
 }
 
-
-/*****************************************************/
-
 html, body {
 	height: 100%;
 	margin:auto;
-	/*max-width: 1500px;*/
+}
+
+a {
+	text-decoration: none;
 }
 
 
@@ -47,6 +61,30 @@ h4 {
 	font-size: 2vw;
 }
 
+/**** Fix font size to absolute value when viewport >= 1501px ****/
+
+
+@media screen and (min-width: 1501px) {
+	.project-box p:nth-child(2) {
+		font-size:60px;
+	}
+
+	header nav a {
+		font-size: 30px;
+	}
+
+	h1 {
+		font-size: 80px;
+	}
+}
+
+/*
+*
+* HEADER, NAVBAR & DROPDOWN MENU
+*
+*/
+
+
 
 .header-container {
 	position: fixed;
@@ -59,35 +97,25 @@ h4 {
 	opacity: 0.5;
 }
 
+header {
+	height: 70px;
+	background-color: #373737;
+}
+
 header, .toggle-menu {
 	width: 100%;
- 	position: relative;
+	position: relative;
 }
 
 /* Set z-index so that .toggle-menu is hiden
 behind header */
+
 header {
 	z-index: 1;
 }
 
 .toggle-menu {
 	z-index: 0;
-}
-
-/*Fix header to top of the viewport*/
-
-
-/*
-*
-* Header 
-*
-*/
-
-/*** Header Logo ***/
-
-header {
-	height: 70px;
-	background-color: #373737;
 }
 
 .header-logo, .toggle-button {
@@ -98,9 +126,9 @@ header {
 	padding-left: 1em;
 }
 
-}
+
 .header-logo p {
-	text-align: right;
+	text-align: left;
 }
 
 .header-logo p:nth-child(1) {
@@ -118,9 +146,9 @@ header {
 }
 
 
-/*** Header Navbar ***/
+/*** Horizontal Navbar ***/
+
 header nav {
-	/*Hide non-toggleable nav bar for screen size <= 701px*/
 	display: none;
 }
 
@@ -149,7 +177,7 @@ header nav a {
 	text-decoration: none;
 	color:black;
 	font-size:2vw;
-	color:#c0b283;	
+	color:#c0b283;
 }
 
 
@@ -157,7 +185,8 @@ header nav a:hover {
 	color:#f4f4f4;
 }
 
-/* Format toggle-button/hamburger icon */
+/*** Dropdown (Toggle) Button ***/
+
 .toggle-button {
 	float:right;
 	margin-top:1.5em;
@@ -166,52 +195,50 @@ header nav a:hover {
 }
 
 .bar-1, .bar-2, .bar-3 {
-    width: 35px;
-    height: 5px;
-    background-color: #c0b283;
-    margin: 6px 0;
-    transition: 0.4s;
+	width: 35px;
+	height: 5px;
+	background-color: #c0b283;
+	margin: 6px 0;
+	transition: 0.4s;
 }
 
-/*Hamburger icon transforms into cancel icon on click*/
+/** Dropdown button animation **/
 
-/*Rotate and transform the first bar*/
+/* Rotate and transform the first bar */
+
 .change-button .bar-1 {
 	-webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
-    transform: rotate(-45deg) translate(-9px, 6px) ;
+	transform: rotate(-45deg) translate(-9px, 6px) ;
 }
 
-/*Fade out the second bar*/
+/* Fade out the second bar */
+
 .change-button .bar-2 {
 	opacity: 0;
 }
 
-/*Rotate and transform the the third bar*/
+/* Rotate and transform the the third bar */
+
 .change-button .bar-3 {
-    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
-    transform: rotate(45deg) translate(-8px, -8px) ;
+	-webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+	transform: rotate(45deg) translate(-8px, -8px) ;
 }
 
-
-/*
-*
-*Toogleable Menu
-*
-*/ 
+/*** Dropdown Menu ***/
 
 .toggle-menu {
 	width: 100%;
 	height:190px;
 	background-color: #f4f4f4;
-	-webkit-transform: translate(0,-190px);
-	transform:translate(0,-190px);
+	-webkit-transform: translate(0,-200px);
+	transform:translate(0,-200px);
 	transition: transform 0.5s ease;
 }
 
 .toggle-menu ul {
 	margin:0;
 	padding-top:10px;
-} 
+}
 
 .toggle-menu li {
 	display: block;
@@ -233,18 +260,12 @@ header nav a:hover {
 	transform:translate(0,0px);
 }
 
-/*
-*
-* Responsive Design 
-*
-*/
-
-/*When viewport width is more than or equal to 701,
-use non-toggleable nav bar instead of toggleable menu*/
+/*** Responsive Navbar & Dropdown Menu ***/
 
 @media screen and (min-width:701px) {
 	header {
 		display: flex;
+		height:100px;
 	}
 
 	header nav {
@@ -252,10 +273,18 @@ use non-toggleable nav bar instead of toggleable menu*/
 		width: 75%;
 	}
 
+	header nav ul {
+		width: 100%;
+	}
+
 	.header-logo {
 		width:35%;
 		padding-left: 3%;
 		cursor:pointer;
+	}
+
+	.header-logo p {
+		text-align: left;
 	}
 
 	.header-logo p:nth-child(1) {
@@ -266,26 +295,8 @@ use non-toggleable nav bar instead of toggleable menu*/
 		font-size:15px;
 	}
 
-	header nav ul {
-		width: 100%;
-	}
-
-	.header-logo {
-		width: 35%;
-	}
-
-	.toggle-button {
+	.toggle-button, .toggle-menu {
 		display: none;
-	}
-
-	.toggle-menu {
-		display: none;
-	}
-
-	/*Expand the header and adjust the position of
-	jumbotron accordingly*/
-	header {
-		height:100px;
 	}
 
 	.jumbotron {
@@ -295,6 +306,10 @@ use non-toggleable nav bar instead of toggleable menu*/
 }
 
 @media screen and (min-width: 1001px) {
+	header nav {
+		font-size:;
+	}
+
 	.header-logo p:nth-child(1) {
 		font-size:33px;
 	}
@@ -302,11 +317,9 @@ use non-toggleable nav bar instead of toggleable menu*/
 	.header-logo p:nth-child(2) {
 		font-size:18px;
 	}
-
-	header nav {
-		font-size:;
-	} 
 }
+
+
 
 /*
 *
@@ -314,14 +327,18 @@ use non-toggleable nav bar instead of toggleable menu*/
 *
 */
 
+
+
 .jumbotron {
 	position:relative;
 	top:70px;
-	z-index:-1; /* Under dropdown menu */
+	z-index:-1; /* Jumbotron is positioned beneath dropdown menu */
 	width: 100%;
 	height: 271px;
 	background: url('../images/jumbotron-375.jpg') no-repeat center;
 }
+
+/*** Responsive Jumbotron Background ***/
 
 @media screen and (min-width:376px) {
 	.jumbotron {
@@ -380,11 +397,14 @@ use non-toggleable nav bar instead of toggleable menu*/
 }
 
 
+
 /*
 *
 * Main
 *
 */
+
+
 
 main section {
 	position: relative;
@@ -394,10 +414,10 @@ main section {
 }
 
 main section h1 {
-	text-align: center; 
+	text-align: center;
 }
 
-/***Featured Work***/
+/*** Featured Work ***/
 
 .featured-work {
 	display: flex;
@@ -407,12 +427,10 @@ main section h1 {
 .project-box {
 	width: 95%;
 	height: 95%;
-	/*border: 1px solid black;*/
 	margin: auto;
 	padding-bottom:10%;
 }
 
-/* Project picture */
 .project-picture {
 	display: block;
 	width:100%;
@@ -421,7 +439,7 @@ main section h1 {
 }
 
 .project-picture:hover {
-	border: 5px solid #c0b283;		
+	border: 5px solid #c0b283;
 }
 
 .project-box p {
@@ -438,15 +456,16 @@ main section h1 {
 	padding-bottom:10px;
 }
 
-.project-box a{
+.project-box a {
 	display: block;
 	text-align: center;
 }
 
-/* View github repo button */
 .view-github-repo {
 	width: 50px;
 }
+
+/* Responsive grid layout for project showcase */
 
 @media screen and (min-width: 426px) {
 	/*Display 2 project-boxes on one row*/
@@ -456,12 +475,13 @@ main section h1 {
 	}
 
 	.view-github-repo {
-	width: 60px;
-}
+		width: 60px;
+	}
+
 }
 
 @media screen and (min-width: 769px) {
-	/*Display 2 project-boxes on one row*/
+	/*Display 3 project-boxes on one row*/
 	.project-box {
 		width: 26%;
 		height: 26%;
@@ -480,43 +500,35 @@ main section h1 {
 
 /*** Testimonials ***/
 
+.testimonial-container {
+	display: flex;
+}
+
 .slide {
 	width: 75%;
 	margin:auto;
 	height: 45vw;
-	/*border-bottom: 1px solid black;*/
-	/*background-color:green;*/
-}
-
-.testimonial-container {
-	display: flex;
 }
 
 .slide p, .testimonial-picture, .testimonial-buttons {
 	margin:auto;
 }
 
-.testimonial-buttons {
-	text-align: center;
-	margin-top:0;
-}
-
 .slide p {
 	text-align:center;
-}
-
-.slide-disappear {
-	display: none;
 }
 
 .testimonial-picture {
 	display: block;
 	width: 80px;
 	height: 80px;
-	/*border: solid 1px black;*/
 	border-radius:50%;
 }
 
+.testimonial-buttons {
+	text-align: center;
+	margin-top:0;
+}
 
 .testimonial-buttons button {
 	border:none;
@@ -528,10 +540,20 @@ main section h1 {
 	color:#c0b283;
 }
 
+.slide-disappear {
+	/* For slideshow animation */
+	display: none;
+}
+
 
 /*** Connect with me ***/
+
+.connect {
+	border-bottom: none;
+}
+
 .connect p {
-	text-align: center;	
+	text-align: center;
 	letter-spacing: 3vw;
 }
 .connect a {
@@ -540,12 +562,10 @@ main section h1 {
 }
 
 .connect a i:hover{
-	color:#c0b283;
+	color: #c0b283;
 }
 
-.connect {
-	border-bottom: none;
-}
+
 
 /*
 *
@@ -553,30 +573,8 @@ main section h1 {
 *
 */
 
+
+
 footer {
 	height: 200px;
 }
-
-/*
-*
-* Fix all font sizes when viewport >= 1501px 
-*
-*/
-
-/*Fix text size when viewport >= 1501px*/
-@media screen and (min-width: 1501px) {
-	.project-box p:nth-child(2) {
-		font-size:60px;
-	}
-
-	header nav a {
-		font-size: 30px;
-	}
-
-	h1 {
-		font-size: 80px;
-	}
-}
-
-
-
