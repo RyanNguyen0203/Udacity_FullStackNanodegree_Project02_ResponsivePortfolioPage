@@ -12,7 +12,7 @@ img, embed, object, video {
 	max-width: 100%;
 }
 
-*{
+* {
 	box-sizing: border-box;
 }
 
@@ -30,8 +30,8 @@ img, embed, object, video {
 
 * {
 	max-width: 1500px;
-	font-size:3vw;
-	font-family: 'Lato', sans-serif;
+	font-size: 3vw;
+	font-family: "Lato", sans-serif;
 	color:#373737;
 }
 
@@ -61,22 +61,7 @@ h4 {
 	font-size: 2vw;
 }
 
-/**** Fix font size to absolute value when viewport >= 1501px ****/
 
-
-@media screen and (min-width: 1501px) {
-	.project-box p:nth-child(2) {
-		font-size:60px;
-	}
-
-	header nav a {
-		font-size: 30px;
-	}
-
-	h1 {
-		font-size: 80px;
-	}
-}
 
 /*
 *
@@ -132,17 +117,17 @@ header {
 }
 
 .header-logo p:nth-child(1) {
-	margin-top:0.5em;
+	margin-top: 0.5em;
 	margin-bottom: 0;
-	font-size:27px;
-	font-family: 'Lobster', cursive;
-	color:#c0b283;
+	font-size: 27px;
+	font-family: "Lobster", cursive;
+	color: #c0b283;
 }
 
 .header-logo p:nth-child(2) {
-	margin-top:0.2em;
-	font-size:13px;
-	color:#c0b283;
+	margin-top: 0.2em;
+	font-size: 13px;
+	color: #c0b283;
 }
 
 
@@ -153,17 +138,17 @@ header nav {
 }
 
 header nav {
-	float:right;
+	float: right;
 	vertical-align: center;
 	height: 100%;
 }
 
 header nav ul {
-	display:table;
+	display: table;
 	width: 90%;
 	height: 100%;
-	padding:0;
-	margin:0;
+	padding: 0;
+	margin: 0;
 	float:right;
 }
 
@@ -175,22 +160,22 @@ header nav ul li {
 
 header nav a {
 	text-decoration: none;
-	color:black;
-	font-size:2vw;
-	color:#c0b283;
+	color: black;
+	font-size: 2vw;
+	color: #c0b283;
 }
 
 
 header nav a:hover {
-	color:#f4f4f4;
+	color: #f4f4f4;
 }
 
 /*** Dropdown (Toggle) Button ***/
 
 .toggle-button {
-	float:right;
-	margin-top:1.5em;
-	padding-right:1em;
+	float: right;
+	margin-top: 1.5em;
+	padding-right: 1em;
 	cursor: pointer;
 }
 
@@ -228,16 +213,16 @@ header nav a:hover {
 
 .toggle-menu {
 	width: 100%;
-	height:190px;
+	height: 190px;
 	background-color: #f4f4f4;
 	-webkit-transform: translate(0,-200px);
-	transform:translate(0,-200px);
+	transform: translate(0,-200px);
 	transition: transform 0.5s ease;
 }
 
 .toggle-menu ul {
-	margin:0;
-	padding-top:10px;
+	margin: 0;
+	padding-top: 10px;
 }
 
 .toggle-menu li {
@@ -247,8 +232,8 @@ header nav a:hover {
 
 .toggle-menu ul li a {
 	text-decoration: none;
-	color:black;
-	font-size:17px;
+	color: black;
+	font-size: 17px;
 }
 
 .toggle-menu ul li a:active {
@@ -257,7 +242,7 @@ header nav a:hover {
 
 .pull-menu-out {
 	-webkit-transform: translate(0,0px);
-	transform:translate(0,0px);
+	transform: translate(0,0px);
 }
 
 /*** Responsive Navbar & Dropdown Menu ***/
@@ -265,7 +250,7 @@ header nav a:hover {
 @media screen and (min-width:701px) {
 	header {
 		display: flex;
-		height:100px;
+		height: 100px;
 	}
 
 	header nav {
@@ -278,9 +263,9 @@ header nav a:hover {
 	}
 
 	.header-logo {
-		width:35%;
+		width: 35%;
 		padding-left: 3%;
-		cursor:pointer;
+		cursor: pointer;
 	}
 
 	.header-logo p {
@@ -288,11 +273,11 @@ header nav a:hover {
 	}
 
 	.header-logo p:nth-child(1) {
-		font-size:30px;
+		font-size: 30px;
 	}
 
 	.header-logo p:nth-child(2) {
-		font-size:15px;
+		font-size: 15px;
 	}
 
 	.toggle-button, .toggle-menu {
@@ -300,22 +285,19 @@ header nav a:hover {
 	}
 
 	.jumbotron {
-		top:100px;
+		top: 100px;
 	}
 
 }
 
 @media screen and (min-width: 1001px) {
-	header nav {
-		font-size:;
-	}
 
 	.header-logo p:nth-child(1) {
-		font-size:33px;
+		font-size: 33px;
 	}
 
 	.header-logo p:nth-child(2) {
-		font-size:18px;
+		font-size: 18px;
 	}
 }
 
@@ -330,12 +312,12 @@ header nav a:hover {
 
 
 .jumbotron {
-	position:relative;
-	top:70px;
-	z-index:-1; /* Jumbotron is positioned beneath dropdown menu */
+	position: relative;
+	top: 70px;
+	z-index: -1; /* Jumbotron is positioned beneath dropdown menu */
 	width: 100%;
 	height: 271px;
-	background: url('../images/jumbotron-375.jpg') no-repeat center;
+	background: url("../images/jumbotron-375.jpg") no-repeat center;
 }
 
 /*** Responsive Jumbotron Background ***/
@@ -343,56 +325,56 @@ header nav a:hover {
 @media screen and (min-width:376px) {
 	.jumbotron {
 		height: 236px;
-		background: url('../images/jumbotron-420.jpg') no-repeat center;
+		background: url("../images/jumbotron-420.jpg") no-repeat center;
 	}
 }
 
 @media screen and (min-width:421px) {
 	.jumbotron {
 		height: 366px;
-		background: url('../images/jumbotron-650.jpg') no-repeat center;
+		background: url("../images/jumbotron-650.jpg") no-repeat center;
 	}
 }
 
 @media screen and (min-width:651px) {
 	.jumbotron {
 		height: 451px;
-		background: url('../images/jumbotron-800.jpg') no-repeat center;
+		background: url("../images/jumbotron-800.jpg") no-repeat center;
 	}
 }
 
 @media screen and (min-width:801px) {
 	.jumbotron {
 		height: 507px;
-		background: url('../images/jumbotron-900.jpg') no-repeat center;
+		background: url("../images/jumbotron-900.jpg") no-repeat center;
 	}
 }
 
 @media screen and (min-width:901px) {
 	.jumbotron {
 		height: 592px;
-		background: url('../images/jumbotron-1050.jpg') no-repeat center;
+		background: url("../images/jumbotron-1050.jpg") no-repeat center;
 	}
 }
 
 @media screen and (min-width:1051px) {
 	.jumbotron {
 		height: 676px;
-		background: url('../images/jumbotron-1200.jpg') no-repeat center;
+		background: url("../images/jumbotron-1200.jpg") no-repeat center;
 	}
 }
 
 @media screen and (min-width:1201px) {
 	.jumbotron {
 		height: 760px;
-		background: url('../images/jumbotron-1350.jpg') no-repeat center;
+		background: url("../images/jumbotron-1350.jpg") no-repeat center;
 	}
 }
 
 @media screen and (min-width:1351px) {
 	.jumbotron {
 		height: 844px;
-		background: url('../images/jumbotron-1500.jpg') no-repeat center;
+		background: url("../images/jumbotron-1500.jpg") no-repeat center;
 	}
 }
 
@@ -408,7 +390,7 @@ header nav a:hover {
 
 main section {
 	position: relative;
-	top:100px;
+	top: 100px;
 	padding: 0 15% 0 15%;
 	border-bottom: solid #dcd0c0 0.5px;
 }
@@ -428,32 +410,33 @@ main section h1 {
 	width: 95%;
 	height: 95%;
 	margin: auto;
-	padding-bottom:10%;
+	padding-bottom: 10%;
 }
 
 .project-picture {
 	display: block;
-	width:100%;
-	margin:auto;
-	border-radius:5%;
+	width: 100%;
+	margin: auto;
+	border-radius: 5%;
 }
 
 .project-picture:hover {
 	border: 5px solid #c0b283;
 }
 
+.project-box h2 {
+	margin: 10px 0 17px 0;
+	font-weight: normal;
+	text-align: center;
+}
+
 .project-box p {
 	text-align: center;
 }
 
-.project-box p:nth-child(2) {
-	font-size:4vw;
-	margin:10px 0 17px 0;
-}
-
 .project-box p:nth-child(3) {
-	margin:0;
-	padding-bottom:10px;
+	margin: 0;
+	padding-bottom: 10px;
 }
 
 .project-box a {
@@ -461,8 +444,8 @@ main section h1 {
 	text-align: center;
 }
 
-.view-github-repo {
-	width: 50px;
+.project-box .fa-github:hover {
+	color: #c0b283;
 }
 
 /* Responsive grid layout for project showcase */
@@ -487,12 +470,12 @@ main section h1 {
 		height: 26%;
 	}
 
-	.project-box p:nth-child(2) {
-		font-size:2.75vw;
+	.project-box h2 {
+		font-size: 2.75vw;
 	}
 
 	.project-box p:nth-child(3) {
-		font-size:2vw;
+		font-size: 2vw;
 	}
 
 }
@@ -506,38 +489,45 @@ main section h1 {
 
 .slide {
 	width: 75%;
-	margin:auto;
+	margin: auto;
 	height: 45vw;
 }
 
+@media screen and (min-width: 1501px) {
+	.slide {
+		/* Fix slide height */
+		height: 675px;
+	}
+}
+
 .slide p, .testimonial-picture, .testimonial-buttons {
-	margin:auto;
+	margin: auto;
 }
 
 .slide p {
-	text-align:center;
+	text-align: center;
 }
 
 .testimonial-picture {
 	display: block;
 	width: 80px;
 	height: 80px;
-	border-radius:50%;
+	border-radius: 50%;
 }
 
 .testimonial-buttons {
 	text-align: center;
-	margin-top:0;
+	margin-top: 0;
 }
 
 .testimonial-buttons button {
-	border:none;
+	border: none;
 	background-color: white;
 	cursor: pointer;
 }
 
 .testimonial-buttons button i:hover {
-	color:#c0b283;
+	color: #c0b283;
 }
 
 .slide-disappear {
@@ -561,7 +551,7 @@ main section h1 {
 	color: black;
 }
 
-.connect a i:hover{
+.connect a i:hover {
 	color: #c0b283;
 }
 
@@ -577,4 +567,39 @@ main section h1 {
 
 footer {
 	height: 200px;
+}
+
+
+
+/**** Fix font sizes to absolute value when viewport >= 1501px ****/
+
+
+@media screen and (min-width: 1501px) {
+	* {
+		font-size: 45px;
+	}
+
+	.project-box p:nth-child(2) {
+		font-size: 60px;
+	}
+
+	header nav a {
+		font-size: 30px;
+	}
+
+	h1 {
+		font-size: 80px;
+	}
+
+	.project-box h2 {
+		font-size: 41.25px;
+	}
+
+	.project-box p:nth-child(3) {
+		font-size: 30px;
+	}
+
+	.connect a {
+		font-size: 120px;
+	}
 }
