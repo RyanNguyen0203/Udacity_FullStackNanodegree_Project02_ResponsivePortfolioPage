@@ -317,7 +317,7 @@ header nav a:hover {
 	z-index: -1; /* Jumbotron is positioned beneath dropdown menu */
 	width: 100%;
 	height: 271px;
-	background: url("../images/jumbotron-375.jpg") no-repeat center;
+	background: url(../images/jumbotron-375.jpg) no-repeat center;
 }
 
 /*** Responsive Jumbotron Background ***/
